@@ -16,3 +16,5 @@ Integration testing can be done by using the supplied TestContainer configuratio
 
 To hot-reload the server when running, you need to run `./gradlew compileJava` while
 another `gradle` instance is running `bootTestRun`. [Source](https://www.docker.com/blog/spring-boot-application-testing-and-development-with-testcontainers/)
+Hot-reloading will not recreate the Postgres container to save some time. If you need to reset the Postgres container, you need to 
+run `./gradlew bootTestRun` again.
